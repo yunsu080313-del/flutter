@@ -37,6 +37,7 @@ class _startState extends State<start> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
+      await Controller.loadMoon();
       moon = false;
       anilogo = false;
       anibutton = false;

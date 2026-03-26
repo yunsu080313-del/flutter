@@ -15,6 +15,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
       title: 'Daily Tarot',
+      theme: ThemeData(
+        textTheme: TextTheme(
+          bodyMedium: TextStyle(
+            color: Colors.white
+          )
+        )
+      ),
 
       home: start(),
     );

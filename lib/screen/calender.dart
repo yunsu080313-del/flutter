@@ -70,7 +70,7 @@ Widget cell(DateTime date, bool thisweek) => GestureDetector(
 );
 
 Widget title(BuildContext context) {
-  final now = Controller.focusDay;
+  final now = DateTime.now();
 
   return GestureDetector(
     onTap: () {
@@ -97,7 +97,7 @@ Widget title(BuildContext context) {
                 mode: CupertinoDatePickerMode.monthYear,
                 minimumYear: 1900,
                 maximumYear: now.year,
-                initialDateTime: now,
+                initialDateTime: Controller.focusDay,
               ),
             ),
           );
@@ -105,7 +105,7 @@ Widget title(BuildContext context) {
       );
     },
     child: Text(
-      format('yyyy .M', now),
+      format('yyyy .M', Controller.focusDay),
       style: TextStyle(color: Colors.white, fontSize: 30),
     ),
   );
