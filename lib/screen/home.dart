@@ -66,7 +66,7 @@ class _startState extends State<start> {
           inputField(context, '나이를 입력해주세요.', '나이는 숫자만 입력 가능합니다', false),
           gender(),
           calender(context),
-          Clock(),
+          FastClock(),
           Check(),
         ];
 
